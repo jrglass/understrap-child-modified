@@ -1,0 +1,927 @@
+.gallery {
+  margin-bottom: 1.5em; }
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%; }
+  .gallery-columns-2 .gallery-item {
+    max-width: 50%; }
+  .gallery-columns-3 .gallery-item {
+    max-width: 33.33%; }
+  .gallery-columns-4 .gallery-item {
+    max-width: 25%; }
+  .gallery-columns-5 .gallery-item {
+    max-width: 20%; }
+  .gallery-columns-6 .gallery-item {
+    max-width: 16.66%; }
+  .gallery-columns-7 .gallery-item {
+    max-width: 14.28%; }
+  .gallery-columns-8 .gallery-item {
+    max-width: 12.5%; }
+  .gallery-columns-9 .gallery-item {
+    max-width: 11.11%; }
+
+.gallery-caption {
+  display: block; }
+
+@font-face {
+  font-family: 'Gilroy Black';
+  src: url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff"), url("../fonts/Gilroy-Black.eot") format("eot"), url("../fonts/Gilroy-Black.ttf") format("ttf"), url("../fonts/Gilroy-Black.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Gilroy Bold';
+  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.eot") format("eot"), url("../fonts/Gilroy-Bold.ttf") format("ttf"), url("../fonts/Gilroy-Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Gilroy Medium';
+  src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.eot") format("eot"), url("../fonts/Gilroy-Medium.ttf") format("ttf"), url("../fonts/Gilroy-Medium.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Gilroy Regular';
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.eot") format("eot"), url("../fonts/Gilroy-Regular.ttf") format("ttf"), url("../fonts/Gilroy-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Helvetica Neue Condensed Bold';
+  src: url("../fonts/HelveticaNeue-CondensedBold.woff2") format("woff2"), url("../fonts/HelveticaNeue-CondensedBold.woff") format("woff"), url("../fonts/HelveticaNeue-CondensedBold.eot") format("eot"), url("../fonts/HelveticaNeue-CondensedBold.ttf") format("ttf"), url("../fonts/HelveticaNeue-CondensedBold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue Condensed Bold";
+  font-weight: normal;
+  font-style: normal; }
+
+h1.gilroy,
+h2.gilroy,
+h3.gilroy,
+h4.gilroy,
+h5.gilroy,
+h6.gilroy {
+  font-family: "Gilroy Bold";
+  font-weight: normal;
+  font-style: normal; }
+
+h1.gilroy-medium,
+h2.gilroy-medium,
+h3.gilroy-medium,
+h4.gilroy-medium,
+h5.gilroy-medium,
+h6.gilroy-medium {
+  font-family: "Gilroy Medium";
+  font-weight: normal;
+  font-style: normal; }
+
+.gilroy {
+  font-family: "Gilroy Bold"; }
+
+p, li {
+  font-family: "Gilroy Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px; }
+
+b, strong {
+  font-family: "Gilroy Bold";
+  font-weight: normal;
+  font-style: normal; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1225px !important; } }
+
+.entry-footer {
+  margin: 50px 0;
+  text-align: center; }
+  .entry-footer .footer-button {
+    background-color: #000a3f;
+    padding: 20px 50px;
+    color: #fff;
+    font-family: "Gilroy Bold";
+    font-size: 18px; }
+    .entry-footer .footer-button:hover {
+      color: #fff; }
+
+@media (min-width: 992px) {
+  .admin-bar #wrapper-navbar {
+    top: 32px; } }
+
+iframe {
+  border: none; }
+
+@media (min-width: 992px) {
+  #wrapper-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 35px 0;
+    z-index: 10; } }
+#wrapper-navbar nav {
+  height: 150px; }
+  #wrapper-navbar nav .container-fluid {
+    position: relative; }
+    #wrapper-navbar nav .container-fluid .custom-logo-link {
+      width: 250px;
+      height: 208px;
+      margin: 0 auto;
+      position: absolute;
+      left: 0;
+      right: 0; }
+      @media (max-width: 991px) {
+        #wrapper-navbar nav .container-fluid .custom-logo-link {
+          position: relative;
+          margin: 0;
+          width: 150px;
+          height: 125px; } }
+      #wrapper-navbar nav .container-fluid .custom-logo-link img {
+        width: 250px;
+        height: 208px; }
+        @media (max-width: 991px) {
+          #wrapper-navbar nav .container-fluid .custom-logo-link img {
+            width: 150px;
+            height: 125px; } }
+    #wrapper-navbar nav .container-fluid .navbar-toggler {
+      color: #000a3f;
+      border-color: #000a3f; }
+    #wrapper-navbar nav .container-fluid #navbarNavDropdown {
+      padding-top: 60px; }
+      @media (max-width: 991px) {
+        #wrapper-navbar nav .container-fluid #navbarNavDropdown {
+          position: absolute;
+          background-color: #fff;
+          top: 135px;
+          bottom: 0;
+          left: -16px;
+          right: -16px;
+          z-index: 1;
+          height: 100vh; } }
+      #wrapper-navbar nav .container-fluid #navbarNavDropdown ul {
+        margin: auto; }
+        @media (max-width: 991px) {
+          #wrapper-navbar nav .container-fluid #navbarNavDropdown ul {
+            text-align: center; } }
+        #wrapper-navbar nav .container-fluid #navbarNavDropdown ul li {
+          font-size: 18px;
+          font-family: "Helvetica Neue Condensed Bold"; }
+          #wrapper-navbar nav .container-fluid #navbarNavDropdown ul li a {
+            color: #000a3f;
+            padding-bottom: 10px;
+            border-bottom: 3px solid transparent; }
+            #wrapper-navbar nav .container-fluid #navbarNavDropdown ul li a:hover {
+              border-bottom: 3px solid #fcb040; }
+              @media (max-width: 991px) {
+                #wrapper-navbar nav .container-fluid #navbarNavDropdown ul li a:hover {
+                  max-width: 300px;
+                  margin: auto; } }
+        #wrapper-navbar nav .container-fluid #navbarNavDropdown ul li:first-child {
+          margin-left: 45px; }
+          @media (max-width: 991px) {
+            #wrapper-navbar nav .container-fluid #navbarNavDropdown ul li:first-child {
+              margin: 0; } }
+        #wrapper-navbar nav .container-fluid #navbarNavDropdown ul li.split-right {
+          margin-left: 300px; }
+          @media (max-width: 991px) {
+            #wrapper-navbar nav .container-fluid #navbarNavDropdown ul li.split-right {
+              margin: 0; } }
+
+.wp-block-quotes-collection-random-quote {
+  background-color: #fff !important;
+  color: #000 !important;
+  border-radius: 0 !important;
+  margin: 1em 0 3em !important; }
+  .wp-block-quotes-collection-random-quote .quotescollection-quote-wrapper .quotescollection-quote {
+    background-color: #fcb040 !important;
+    color: #000 !important;
+    background-image: url(../img/pt-bg-white.png);
+    background-size: auto;
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding: 60px 25px 25px 70px; }
+    .wp-block-quotes-collection-random-quote .quotescollection-quote-wrapper .quotescollection-quote p {
+      background-color: transparent; }
+    .wp-block-quotes-collection-random-quote .quotescollection-quote-wrapper .quotescollection-quote .attribution {
+      background-color: transparent; }
+
+.home .home-intro {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 900px;
+  margin-top: 50px;
+  margin-right: 0;
+  margin-left: 0; }
+  .home .home-intro .hero-logo-wrapper {
+    max-width: 800px;
+    margin: auto; }
+    .home .home-intro .hero-logo-wrapper img {
+      margin-top: 50px; }
+.home .home-intro-small {
+  width: 100%;
+  height: auto;
+  left: 0;
+  max-height: 900px;
+  overflow: hidden;
+  margin-top: 50px;
+  position: relative; }
+  .home .home-intro-small .intro-bg-small {
+    width: 100%;
+    height: auto; }
+  .home .home-intro-small .intro-logo-small {
+    position: absolute;
+    margin: auto;
+    top: 50px;
+    right: 0;
+    left: 0;
+    max-width: 700px;
+    padding: 0 50px; }
+.home .intro-text {
+  max-width: 1195px;
+  background-color: #fff;
+  padding: 50px; }
+  @media (min-width: 992px) {
+    .home .intro-text {
+      margin-top: -100px; } }
+  @media (max-width: 991px) {
+    .home .intro-text {
+      padding: 0;
+      background-color: transparent;
+      margin-top: 50px; } }
+  @media (max-width: 575px) {
+    .home .intro-text {
+      padding-bottom: 50px; } }
+.home .sweepstakes-wrapper {
+  margin: 100px 0 50px 0; }
+  .home .sweepstakes-wrapper .sweepstakes-banner {
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    height: 185px; }
+    .home .sweepstakes-wrapper .sweepstakes-banner h3.main-text {
+      background-color: #000;
+      color: #fff;
+      max-width: 400px;
+      margin: auto;
+      text-align: center;
+      padding: 15px 50px;
+      text-transform: uppercase;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: -33px; }
+      @media (max-width: 575px) {
+        .home .sweepstakes-wrapper .sweepstakes-banner h3.main-text {
+          top: -95px; } }
+    .home .sweepstakes-wrapper .sweepstakes-banner .overlay {
+      width: 100%;
+      height: 100%;
+      margin: 0 !important;
+      background-color: rgba(252, 176, 64, 0.75); }
+      .home .sweepstakes-wrapper .sweepstakes-banner .overlay h2 {
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase; }
+  .home .sweepstakes-wrapper a:hover {
+    text-decoration: none; }
+.home .featured-pages {
+  margin-bottom: 50px; }
+  @media (max-width: 991px) {
+    .home .featured-pages .single-page {
+      margin-bottom: 50px; } }
+  .home .featured-pages .single-page a:hover {
+    text-decoration: none; }
+  .home .featured-pages .single-page .page-meta {
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    height: 385px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .home .featured-pages .single-page .page-meta h2 {
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #fcb040;
+      max-width: 50%;
+      margin: auto;
+      padding: 10px; }
+      @media (max-width: 575px) {
+        .home .featured-pages .single-page .page-meta h2 {
+          font-size: 1rem; } }
+
+.page-template-destinations .home-intro, .page-template-heli .home-intro {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 900px;
+  margin: 50px 0; }
+  @media (max-width: 991px) {
+    .page-template-destinations .home-intro, .page-template-heli .home-intro {
+      display: none; } }
+  .page-template-destinations .home-intro .col, .page-template-heli .home-intro .col {
+    text-align: center; }
+    .page-template-destinations .home-intro .col h1, .page-template-heli .home-intro .col h1 {
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #fcb040;
+      max-width: 450px;
+      margin: 0 auto 25px;
+      padding: 10px; }
+    .page-template-destinations .home-intro .col h3, .page-template-heli .home-intro .col h3 {
+      text-transform: uppercase;
+      color: #fff;
+      margin: 0 auto 25px; }
+    .page-template-destinations .home-intro .col .button, .page-template-heli .home-intro .col .button {
+      background-color: #000;
+      font-family: "Gilroy Bold";
+      font-size: 17px;
+      padding: 5px 10px;
+      color: #fff;
+      text-transform: uppercase; }
+      .page-template-destinations .home-intro .col .button:hover, .page-template-heli .home-intro .col .button:hover {
+        color: #fff;
+        text-decoration: none; }
+.page-template-destinations .home-intro-small, .page-template-heli .home-intro-small {
+  width: 100%;
+  height: auto;
+  left: 0;
+  max-height: 900px;
+  overflow: hidden;
+  margin-top: 50px;
+  position: relative; }
+.page-template-destinations .home-intro-small-meta, .page-template-heli .home-intro-small-meta {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  margin: 50px 0; }
+  .page-template-destinations .home-intro-small-meta h1, .page-template-heli .home-intro-small-meta h1 {
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #fcb040;
+    max-width: 450px;
+    margin: 0 auto 25px;
+    padding: 10px; }
+  .page-template-destinations .home-intro-small-meta h3, .page-template-heli .home-intro-small-meta h3 {
+    text-transform: uppercase;
+    color: #000;
+    margin: 0 auto 25px; }
+  .page-template-destinations .home-intro-small-meta .button, .page-template-heli .home-intro-small-meta .button {
+    background-color: #000;
+    font-family: "Gilroy Bold";
+    font-size: 17px;
+    padding: 5px 10px;
+    color: #fff;
+    text-transform: uppercase; }
+    .page-template-destinations .home-intro-small-meta .button:hover, .page-template-heli .home-intro-small-meta .button:hover {
+      color: #fff;
+      text-decoration: none; }
+.page-template-destinations .map-wrapper, .page-template-heli .map-wrapper {
+  margin: 0 0 50px 0; }
+  .page-template-destinations .map-wrapper .map-banner, .page-template-heli .map-wrapper .map-banner {
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    height: 185px;
+    background-size: cover; }
+    .page-template-destinations .map-wrapper .map-banner .overlay, .page-template-heli .map-wrapper .map-banner .overlay {
+      width: 100%;
+      height: 100%;
+      margin: 0 !important;
+      background-color: rgba(0, 10, 63, 0.75); }
+      .page-template-destinations .map-wrapper .map-banner .overlay h2, .page-template-heli .map-wrapper .map-banner .overlay h2 {
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase; }
+  .page-template-destinations .map-wrapper a:hover, .page-template-heli .map-wrapper a:hover {
+    text-decoration: none; }
+.page-template-destinations h1.country, .page-template-heli h1.country {
+  border-bottom: 3px solid #eaeaea;
+  padding-bottom: 15px;
+  margin-bottom: 30px; }
+.page-template-destinations .featured-pages .single-page, .page-template-heli .featured-pages .single-page {
+  margin-bottom: 50px; }
+  .page-template-destinations .featured-pages .single-page a, .page-template-heli .featured-pages .single-page a {
+    color: #000a3f; }
+    .page-template-destinations .featured-pages .single-page a:hover, .page-template-heli .featured-pages .single-page a:hover {
+      text-decoration: none; }
+  .page-template-destinations .featured-pages .single-page .page-meta h2, .page-template-heli .featured-pages .single-page .page-meta h2 {
+    color: #000a3f;
+    margin: 30px 0 20px;
+    text-align: center; }
+.page-template-destinations .entry-content .stats, .page-template-heli .entry-content .stats {
+  margin-bottom: 50px; }
+  .page-template-destinations .entry-content .stats .stats-single, .page-template-heli .entry-content .stats .stats-single {
+    background-color: #fcb040;
+    height: 365px;
+    color: #fff; }
+    @media (min-width: 1200px) {
+      .page-template-destinations .entry-content .stats .stats-single, .page-template-heli .entry-content .stats .stats-single {
+        max-width: 565px;
+        margin-left: 15px;
+        margin-right: 32px; } }
+    .page-template-destinations .entry-content .stats .stats-single .align-items-center, .page-template-heli .entry-content .stats .stats-single .align-items-center {
+      height: 100%; }
+      .page-template-destinations .entry-content .stats .stats-single .align-items-center .col, .page-template-heli .entry-content .stats .stats-single .align-items-center .col {
+        text-align: center; }
+        .page-template-destinations .entry-content .stats .stats-single .align-items-center .col .stats-underline, .page-template-heli .entry-content .stats .stats-single .align-items-center .col .stats-underline {
+          width: 150px;
+          height: auto;
+          display: block;
+          margin: -15px auto 15px; }
+        .page-template-destinations .entry-content .stats .stats-single .align-items-center .col h4, .page-template-heli .entry-content .stats .stats-single .align-items-center .col h4 {
+          display: inline-block; }
+          .page-template-destinations .entry-content .stats .stats-single .align-items-center .col h4 a, .page-template-heli .entry-content .stats .stats-single .align-items-center .col h4 a {
+            color: #fff; }
+        .page-template-destinations .entry-content .stats .stats-single .align-items-center .col .hr-line, .page-template-heli .entry-content .stats .stats-single .align-items-center .col .hr-line {
+          height: 3px;
+          background-color: #fff;
+          display: block;
+          width: 10px;
+          margin: 5px auto; }
+  @media (max-width: 1199px) {
+    .page-template-destinations .entry-content .stats .advertisement, .page-template-heli .entry-content .stats .advertisement {
+      margin-top: 50px; } }
+  .page-template-destinations .entry-content .stats .advertisement .banner-570-365, .page-template-heli .entry-content .stats .advertisement .banner-570-365 {
+    text-align: right; }
+    @media (max-width: 1199px) {
+      .page-template-destinations .entry-content .stats .advertisement .banner-570-365, .page-template-heli .entry-content .stats .advertisement .banner-570-365 {
+        text-align: center; } }
+@media (max-width: 781px) {
+  .page-template-destinations .entry-content .wp-block-columns .wp-block-column, .page-template-heli .entry-content .wp-block-columns .wp-block-column {
+    margin-right: 0;
+    margin-left: 0;
+    flex-basis: 100%; } }
+.page-template-destinations .entry-content .wp-block-image, .page-template-heli .entry-content .wp-block-image {
+  margin-bottom: 2rem; }
+.page-template-destinations .entry-content h3, .page-template-heli .entry-content h3 {
+  margin-bottom: 20px; }
+
+.page-template-destinations-child .home-intro {
+  width: 100%;
+  height: auto;
+  left: 0;
+  max-height: 900px;
+  overflow: hidden;
+  margin-top: 50px; }
+  .page-template-destinations-child .home-intro img {
+    width: 100%; }
+  .page-template-destinations-child .home-intro .col {
+    text-align: center; }
+    .page-template-destinations-child .home-intro .col h1 {
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #fcb040;
+      max-width: 450px;
+      margin: 0 auto 25px;
+      padding: 10px; }
+    .page-template-destinations-child .home-intro .col h3 {
+      text-transform: uppercase;
+      color: #fff;
+      margin: 0 auto 25px; }
+    .page-template-destinations-child .home-intro .col .button {
+      background-color: #000;
+      font-family: "Gilroy Bold";
+      font-size: 17px;
+      padding: 5px 10px;
+      color: #fff;
+      text-transform: uppercase; }
+      .page-template-destinations-child .home-intro .col .button:hover {
+        color: #fff;
+        text-decoration: none; }
+.page-template-destinations-child .map-wrapper {
+  margin: 0 0 50px 0; }
+  .page-template-destinations-child .map-wrapper .map-banner {
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    height: 185px;
+    background-size: cover; }
+    .page-template-destinations-child .map-wrapper .map-banner .overlay {
+      width: 100%;
+      height: 100%;
+      margin: 0 !important;
+      background-color: rgba(0, 10, 63, 0.75); }
+      .page-template-destinations-child .map-wrapper .map-banner .overlay h2 {
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase; }
+  .page-template-destinations-child .map-wrapper a:hover {
+    text-decoration: none; }
+.page-template-destinations-child h1.country {
+  border-bottom: 3px solid #eaeaea;
+  padding-bottom: 15px;
+  margin-bottom: 30px; }
+.page-template-destinations-child .featured-pages .single-page {
+  margin-bottom: 50px; }
+  .page-template-destinations-child .featured-pages .single-page a {
+    color: #000a3f; }
+    .page-template-destinations-child .featured-pages .single-page a:hover {
+      text-decoration: none; }
+  .page-template-destinations-child .featured-pages .single-page .page-meta h2 {
+    color: #000a3f;
+    margin: 30px 0 20px;
+    text-align: center; }
+.page-template-destinations-child .entry-content .stats {
+  margin-bottom: 50px; }
+  .page-template-destinations-child .entry-content .stats .stats-single {
+    background-color: #fcb040;
+    height: 365px;
+    color: #fff; }
+    @media (min-width: 1200px) {
+      .page-template-destinations-child .entry-content .stats .stats-single {
+        max-width: 565px;
+        margin-left: 15px;
+        margin-right: 32px; } }
+    .page-template-destinations-child .entry-content .stats .stats-single .align-items-center {
+      height: 100%; }
+      .page-template-destinations-child .entry-content .stats .stats-single .align-items-center .col {
+        text-align: center; }
+        .page-template-destinations-child .entry-content .stats .stats-single .align-items-center .col .stats-underline {
+          width: 150px;
+          height: auto;
+          display: block;
+          margin: -15px auto 15px; }
+        .page-template-destinations-child .entry-content .stats .stats-single .align-items-center .col h4 {
+          display: inline-block; }
+          .page-template-destinations-child .entry-content .stats .stats-single .align-items-center .col h4 a {
+            color: #fff; }
+        .page-template-destinations-child .entry-content .stats .stats-single .align-items-center .col .hr-line {
+          height: 3px;
+          background-color: #fff;
+          display: block;
+          width: 10px;
+          margin: 5px auto; }
+  @media (max-width: 1199px) {
+    .page-template-destinations-child .entry-content .stats .advertisement {
+      margin-top: 50px; } }
+  .page-template-destinations-child .entry-content .stats .advertisement .banner-570-365 {
+    text-align: right; }
+    @media (max-width: 1199px) {
+      .page-template-destinations-child .entry-content .stats .advertisement .banner-570-365 {
+        text-align: center; } }
+@media (max-width: 781px) {
+  .page-template-destinations-child .entry-content .wp-block-columns .wp-block-column {
+    margin-right: 0;
+    margin-left: 0;
+    flex-basis: 100%; } }
+.page-template-destinations-child .entry-content .wp-block-image {
+  margin-bottom: 2rem; }
+.page-template-destinations-child .entry-content h3 {
+  margin-bottom: 20px; }
+
+.page-template-adventures .home-intro {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 900px;
+  margin: 50px 0; }
+  .page-template-adventures .home-intro .col {
+    text-align: center; }
+    .page-template-adventures .home-intro .col h1 {
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #fcb040;
+      max-width: 450px;
+      margin: 0 auto 25px;
+      padding: 10px; }
+    .page-template-adventures .home-intro .col h3 {
+      text-transform: uppercase;
+      color: #fff;
+      margin: 0 auto 25px;
+      max-width: 850px; }
+    .page-template-adventures .home-intro .col .button {
+      background-color: #000;
+      font-family: "Gilroy Bold";
+      font-size: 17px;
+      padding: 5px 10px;
+      color: #fff;
+      text-transform: uppercase; }
+      .page-template-adventures .home-intro .col .button:hover {
+        color: #fff;
+        text-decoration: none; }
+.page-template-adventures .video-intro {
+  width: 100%;
+  height: auto;
+  margin-top: 50px; }
+  .page-template-adventures .video-intro .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden; }
+    .page-template-adventures .video-intro .video-container iframe, .page-template-adventures .video-intro .video-container object, .page-template-adventures .video-intro .video-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+.page-template-adventures .video-text {
+  max-width: 900px;
+  width: 100%;
+  margin: 50px auto; }
+.page-template-adventures .featured-pages {
+  margin-bottom: 50px; }
+  @media (max-width: 991px) {
+    .page-template-adventures .featured-pages .page-meta {
+      margin-top: 15px; } }
+  .page-template-adventures .featured-pages .page-meta .grey-line {
+    background-color: #e2e2e2;
+    height: 15px;
+    width: 150px;
+    margin-bottom: 70px; }
+    @media (max-width: 991px) {
+      .page-template-adventures .featured-pages .page-meta .grey-line {
+        margin-bottom: 25px; } }
+  .page-template-adventures .featured-pages .page-meta a {
+    color: #000a3f; }
+    .page-template-adventures .featured-pages .page-meta a:hover {
+      text-decoration: none; }
+    .page-template-adventures .featured-pages .page-meta a h2 {
+      color: #000a3f;
+      margin: 0 0 20px; }
+  .page-template-adventures .featured-pages .page-meta p {
+    margin-bottom: 5rem; }
+    @media (max-width: 991px) {
+      .page-template-adventures .featured-pages .page-meta p {
+        margin-bottom: 3rem; } }
+  .page-template-adventures .featured-pages .page-meta .author {
+    text-transform: uppercase;
+    font-family: "Gilroy Bold";
+    font-size: 14px;
+    display: block; }
+  .page-template-adventures .featured-pages .page-meta .author-name {
+    font-family: "Gilroy Medium";
+    font-size: 18px;
+    display: block; }
+
+.page-template-adventures-longform #full-width-page-wrapper {
+  margin-top: 50px; }
+  @media (min-width: 992px) {
+    .page-template-adventures-longform #full-width-page-wrapper {
+      margin-top: 270px; } }
+  .page-template-adventures-longform #full-width-page-wrapper .adventures-hero {
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 0;
+    margin-left: 0; }
+    .page-template-adventures-longform #full-width-page-wrapper .adventures-hero .overlay {
+      width: 100%;
+      height: 100%;
+      margin: 0 !important;
+      background-color: rgba(0, 0, 0, 0.5); }
+      .page-template-adventures-longform #full-width-page-wrapper .adventures-hero .overlay .meta {
+        text-align: center;
+        max-width: 1200px;
+        width: 100%;
+        margin: auto; }
+        .page-template-adventures-longform #full-width-page-wrapper .adventures-hero .overlay .meta h1 {
+          color: #fff;
+          font-size: 67px; }
+        .page-template-adventures-longform #full-width-page-wrapper .adventures-hero .overlay .meta .line-break {
+          height: 10px;
+          background-color: #fcb040;
+          max-width: 80px;
+          margin: 20px auto; }
+        .page-template-adventures-longform #full-width-page-wrapper .adventures-hero .overlay .meta p {
+          font-famiy: "Gilroy Medium";
+          color: #fff;
+          font-size: 30px; }
+        .page-template-adventures-longform #full-width-page-wrapper .adventures-hero .overlay .meta .author {
+          text-transform: uppercase;
+          font-family: "Gilroy Bold";
+          font-size: 14px;
+          color: #fff; }
+        .page-template-adventures-longform #full-width-page-wrapper .adventures-hero .overlay .meta .author-name {
+          font-family: "Gilroy Medium";
+          font-size: 18px;
+          color: #fff; }
+  .page-template-adventures-longform #full-width-page-wrapper .adventures-hero-small {
+    width: 100%;
+    height: auto;
+    left: 0;
+    max-height: 900px;
+    overflow: hidden;
+    margin-top: 50px; }
+    .page-template-adventures-longform #full-width-page-wrapper .adventures-hero-small img {
+      width: 100%; }
+  .page-template-adventures-longform #full-width-page-wrapper .adventures-hero-small-meta {
+    text-align: center;
+    margin-top: 50px; }
+    .page-template-adventures-longform #full-width-page-wrapper .adventures-hero-small-meta .line-break {
+      height: 10px;
+      background-color: #fcb040;
+      max-width: 80px;
+      margin: 20px auto; }
+    .page-template-adventures-longform #full-width-page-wrapper .adventures-hero-small-meta p {
+      font-famiy: "Gilroy Medium";
+      font-size: 30px; }
+    .page-template-adventures-longform #full-width-page-wrapper .adventures-hero-small-meta .author {
+      text-transform: uppercase;
+      font-family: "Gilroy Bold";
+      font-size: 14px; }
+    .page-template-adventures-longform #full-width-page-wrapper .adventures-hero-small-meta .author-name {
+      font-family: "Gilroy Medium";
+      font-size: 18px; }
+  .page-template-adventures-longform #full-width-page-wrapper .banner-one {
+    margin-top: 50px; }
+  .page-template-adventures-longform #full-width-page-wrapper #content {
+    margin-top: 50px; }
+    .page-template-adventures-longform #full-width-page-wrapper #content article .entry-content p {
+      max-width: 730px;
+      margin: 25px auto; }
+    .page-template-adventures-longform #full-width-page-wrapper #content article .entry-content .wp-block-columns .wp-block-column {
+      margin-right: 0; }
+      @media (max-width: 781px) {
+        .page-template-adventures-longform #full-width-page-wrapper #content article .entry-content .wp-block-columns .wp-block-column {
+          margin-right: 0;
+          margin-left: 0;
+          flex-basis: 100%; } }
+      .page-template-adventures-longform #full-width-page-wrapper #content article .entry-content .wp-block-columns .wp-block-column .banner-570-365 {
+        width: 100%;
+        height: 100%; }
+
+.page-template-sts-right-sidebar .entry-header {
+  border-bottom: 2px dashed #eaeaea;
+  padding-bottom: 10px; }
+@media (max-width: 991px) {
+  .page-template-sts-right-sidebar #right-sidebar .sidebar-banner {
+    float: none;
+    text-align: center;
+    position: unset; } }
+
+.page-template-sts-right-sidebar .wrapper .sweepstakes-promo, .page-template-destinations-child .wrapper .sweepstakes-promo {
+  margin-top: 50px; }
+  .page-template-sts-right-sidebar .wrapper .sweepstakes-promo hr.sweepstakes, .page-template-destinations-child .wrapper .sweepstakes-promo hr.sweepstakes {
+    border-top: 3px solid #fcb040; }
+  .page-template-sts-right-sidebar .wrapper .sweepstakes-promo .sweepstakes-link, .page-template-destinations-child .wrapper .sweepstakes-promo .sweepstakes-link {
+    margin-top: -50px;
+    color: #fff; }
+    .page-template-sts-right-sidebar .wrapper .sweepstakes-promo .sweepstakes-link a, .page-template-destinations-child .wrapper .sweepstakes-promo .sweepstakes-link a {
+      color: #fff; }
+      .page-template-sts-right-sidebar .wrapper .sweepstakes-promo .sweepstakes-link a:hover, .page-template-destinations-child .wrapper .sweepstakes-promo .sweepstakes-link a:hover {
+        color: #fff; }
+    .page-template-sts-right-sidebar .wrapper .sweepstakes-promo .sweepstakes-link h3, .page-template-destinations-child .wrapper .sweepstakes-promo .sweepstakes-link h3 {
+      background-color: #000a3f;
+      color: #fff;
+      max-width: 375px;
+      margin: auto;
+      padding: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      border-left: 20px solid #fff;
+      border-right: 20px solid #fff; }
+.page-template-sts-right-sidebar .wrapper .content-area, .page-template-destinations-child .wrapper .content-area {
+  margin-top: 50px; }
+  .page-template-sts-right-sidebar .wrapper .content-area .entry-header .author, .page-template-destinations-child .wrapper .content-area .entry-header .author {
+    text-transform: uppercase;
+    font-family: "Gilroy Bold";
+    font-size: 14px; }
+  .page-template-sts-right-sidebar .wrapper .content-area .entry-header .author-name, .page-template-destinations-child .wrapper .content-area .entry-header .author-name {
+    font-family: "Gilroy Medium";
+    font-size: 18px; }
+  .page-template-sts-right-sidebar .wrapper .content-area .entry-content, .page-template-destinations-child .wrapper .content-area .entry-content {
+    margin-top: 50px; }
+
+.page-template-sweepstakes .home-intro {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 900px;
+  margin: 50px 0; }
+  @media (max-width: 991px) {
+    .page-template-sweepstakes .home-intro {
+      display: none; } }
+  .page-template-sweepstakes .home-intro .col {
+    text-align: center; }
+    .page-template-sweepstakes .home-intro .col h1 {
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #fcb040;
+      max-width: 450px;
+      margin: 0 auto 25px;
+      padding: 10px; }
+    .page-template-sweepstakes .home-intro .col h3 {
+      text-transform: uppercase;
+      color: #fff;
+      margin: 0 auto 25px; }
+    .page-template-sweepstakes .home-intro .col .button {
+      background-color: #000;
+      font-family: "Gilroy Bold";
+      font-size: 17px;
+      padding: 5px 10px;
+      color: #fff;
+      text-transform: uppercase; }
+      .page-template-sweepstakes .home-intro .col .button:hover {
+        color: #fff;
+        text-decoration: none; }
+.page-template-sweepstakes .home-intro-small {
+  width: 100%;
+  height: auto;
+  left: 0;
+  max-height: 900px;
+  overflow: hidden;
+  margin-top: 50px;
+  position: relative; }
+.page-template-sweepstakes .home-intro-small-meta {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  margin: 50px 0; }
+  .page-template-sweepstakes .home-intro-small-meta h1 {
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #fcb040;
+    max-width: 450px;
+    margin: 0 auto 25px;
+    padding: 10px; }
+  .page-template-sweepstakes .home-intro-small-meta h3 {
+    text-transform: uppercase;
+    color: #000;
+    margin: 0 auto 25px; }
+  .page-template-sweepstakes .home-intro-small-meta .button {
+    background-color: #000;
+    font-family: "Gilroy Bold";
+    font-size: 17px;
+    padding: 5px 10px;
+    color: #fff;
+    text-transform: uppercase; }
+    .page-template-sweepstakes .home-intro-small-meta .button:hover {
+      color: #fff;
+      text-decoration: none; }
+.page-template-sweepstakes .wrapper article .entry-header {
+  max-width: 730px;
+  margin: 25px auto; }
+.page-template-sweepstakes .wrapper article .entry-content .e-widget-wrapper {
+  margin-top: 75px; }
+.page-template-sweepstakes .wrapper article .entry-content p, .page-template-sweepstakes .wrapper article .entry-content ul, .page-template-sweepstakes .wrapper article .entry-content h1, .page-template-sweepstakes .wrapper article .entry-content h2, .page-template-sweepstakes .wrapper article .entry-content h3, .page-template-sweepstakes .wrapper article .entry-content h4, .page-template-sweepstakes .wrapper article .entry-content h5, .page-template-sweepstakes .wrapper article .entry-content h6 {
+  max-width: 730px;
+  margin: 25px auto; }
+
+#wrapper-footer {
+  background-color: #000a3f;
+  padding: 50px 0;
+  margin-top: 50px; }
+  #wrapper-footer .site-footer .smm-logo {
+    text-align: center; }
+    #wrapper-footer .site-footer .smm-logo img {
+      width: 100px;
+      height: auto; }
+  #wrapper-footer .site-footer #footer-nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0; }
+    #wrapper-footer .site-footer #footer-nav ul li {
+      font-size: 18px;
+      font-family: "Helvetica Neue Condensed Bold";
+      display: inline-block; }
+      #wrapper-footer .site-footer #footer-nav ul li a {
+        color: #fff; }
+        #wrapper-footer .site-footer #footer-nav ul li a:hover {
+          color: #eaeaea; }
+  #wrapper-footer .site-footer .copyright {
+    color: #fff;
+    text-align: center;
+    font-size: 14px; }
+
+.responsive-banner {
+  width: 100%;
+  text-align: center; }
+  @media (max-width: 991px) {
+    .responsive-banner {
+      margin-left: -15px; } }
+  @media (max-width: 767px) {
+    .responsive-banner {
+      margin-left: 0; } }
+
+.banner-one {
+  margin-top: 270px; }
+  @media (max-width: 991px) {
+    .banner-one {
+      margin-top: 50px; } }
+
+.banner-two {
+  margin-bottom: 50px; }
+
+.sidebar-banner {
+  margin-top: 50px;
+  float: right; }
+  @media (min-width: 992px) {
+    .sidebar-banner {
+      top: 50px !important; } }
+
+/*# sourceMappingURL=child-theme.min.css.map */

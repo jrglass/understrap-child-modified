@@ -1,0 +1,178 @@
+<?php
+/**
+ * The header for our theme.
+ *
+ * Displays all of the <head> section and everything up till <div id="content">
+ *
+ * @package understrap
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+$container = get_theme_mod( 'understrap_container_type' );
+?>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<?php wp_head(); ?>
+
+    <!-- Bootstrap CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72137-32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-72137-32');
+    </script>
+
+
+    <!-- Responsive Google Ads Manager Tags -->
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+    <script>
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+    </script>
+
+    <script>
+
+      googletag.cmd.push(function() {
+
+        // STS Responsive Ad 1
+        var mappingSTSAd1 = googletag.sizeMapping().
+        addSize([1200,0], [1195,300]).
+        addSize([768,0], [728,90]).
+        addSize([0,0], [300,250]).
+        build();
+
+        googletag.defineSlot('/1038303/STS_1195_300', [1195, 300], 'div-gpt-ad-1556225236001-0').
+        defineSizeMapping(mappingSTSAd1).
+        addService(googletag.pubads());
+
+        // STS Responsive Ad 2
+        var mappingSTSAd2 = googletag.sizeMapping().
+        addSize([1200,0], [1195,300]).
+        addSize([768,0], [728,90]).
+        addSize([0,0], [300,250]).
+        build();
+
+        googletag.defineSlot('/1038303/STS_1195_300', [1195, 300], 'div-gpt-ad-1556225236001-1').
+        defineSizeMapping(mappingSTSAd2).
+        addService(googletag.pubads());
+
+        // STS Responsive Ad 300x600
+        var mappingSTS300x600 = googletag.sizeMapping().
+        addSize([0,0], [300,600]).
+        build();
+
+        googletag.defineSlot('/1038303/STS_300x600', [300, 600], 'div-gpt-ad-1556225484509-0').
+        defineSizeMapping(mappingSTS300x600).
+        addService(googletag.pubads());
+
+        // STS Responsive Ad 570x365
+        var mappingSTS570x365 = googletag.sizeMapping().
+        addSize([1200,0], [570,365]).
+        addSize([0,0], [300,250]).
+        build();
+
+        googletag.defineSlot('/1038303/STS_570_365', [570, 365], 'div-gpt-ad-1556225518646-0').
+        defineSizeMapping(mappingSTS570x365).
+        addService(googletag.pubads());
+
+        googletag.pubads().collapseEmptyDivs();
+        googletag.enableServices();
+
+      });
+    </script>
+
+</head>
+
+<body <?php body_class(); ?>>
+
+<div class="site" id="page">
+
+	<!-- ******************* The Navbar Area ******************* -->
+	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
+
+		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
+
+		<nav class="navbar navbar-expand-lg navbar-dark">
+
+			<div class="container-fluid">
+
+					<!-- Your site title as branding in the menu -->
+					<?php if ( ! has_custom_logo() ) { ?>
+
+						<?php if ( is_front_page() && is_home() ) : ?>
+
+							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+
+						<?php else : ?>
+
+							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+
+						<?php endif; ?>
+
+
+					<?php } else {
+						the_custom_logo();
+					} ?><!-- end custom logo -->
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+                    <i class="fas fa-bars"></i>
+				</button>
+
+				<!-- The WordPress Menu goes here -->
+				<?php wp_nav_menu(
+					array(
+						'theme_location'  => 'main',
+						'container_class' => 'collapse navbar-collapse',
+						'container_id'    => 'navbarNavDropdown',
+						'menu_class'      => 'navbar-nav ml-auto',
+						'fallback_cb'     => '',
+						'menu_id'         => 'main-menu',
+						'depth'           => 2,
+						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+					)
+				); ?>
+
+			</div><!-- .container -->
+
+
+		</nav><!-- .site-navigation -->
+
+	</div><!-- #wrapper-navbar end -->
+
+    <?php if( is_page( array( 36, 38, 40, 43 ) ) ) :
+
+        // Remove Responsive Banner
+
+    else : ?>
+
+    <div class="responsive-banner banner-one">
+
+        <!-- /1038303/STS_1195_300 -->
+        <div id='div-gpt-ad-1556225236001-0'>
+            <script>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1556225236001-0'); });
+            </script>
+        </div>
+
+    </div>
+
+    <?php endif; ?>

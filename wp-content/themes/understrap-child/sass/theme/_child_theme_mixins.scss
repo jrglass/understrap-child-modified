@@ -1,0 +1,39 @@
+//
+// Breakpoint Mixins based on Bootstrap
+//
+@mixin breakpoint($size) {
+  @if $size == bp_1200_up {
+    @media (min-width: 1200px) { @content; }
+  }
+
+  @if $size == bp_1199_down {
+    @media (max-width: 1199px) { @content; }
+  }
+
+  @if $size == bp_992_up {
+    @media (min-width: 992px) { @content; }
+  }
+
+  @if $size == bp_991_down {
+    @media (max-width: 991px) { @content; }
+  }
+
+  @if $size == bp_781_down {
+    @media (max-width: 781px) { @content; }
+  }
+
+  @if $size == bp_768_up {
+    @media (min-width: 768px) { @content; }
+  }
+
+  @if $size == bp_767_down {
+    @media (max-width: 767px) { @content; }
+  }
+
+  @if $size == bp_576_up {
+    @media (min-width: 576px) { @content; }
+  }
+  @if $size == bp_575_down {
+    @media (max-width: 575px) { @content; }
+  }
+}
