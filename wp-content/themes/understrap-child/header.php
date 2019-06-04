@@ -31,79 +31,11 @@ $container = get_theme_mod( 'understrap_container_type' );
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72137-32"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-72137-32');
-    </script>
-
-
-    <!-- Responsive Google Ads Manager Tags -->
-    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
-    <script>
-      var googletag = googletag || {};
-      googletag.cmd = googletag.cmd || [];
-    </script>
-
-    <script>
-
-      googletag.cmd.push(function() {
-
-        // STS Responsive Ad 1
-        var mappingSTSAd1 = googletag.sizeMapping().
-        addSize([1200,0], [1195,300]).
-        addSize([768,0], [728,90]).
-        addSize([0,0], [300,250]).
-        build();
-
-        googletag.defineSlot('/1038303/STS_1195_300', [1195, 300], 'div-gpt-ad-1556225236001-0').
-        defineSizeMapping(mappingSTSAd1).
-        addService(googletag.pubads());
-
-        // STS Responsive Ad 2
-        var mappingSTSAd2 = googletag.sizeMapping().
-        addSize([1200,0], [1195,300]).
-        addSize([768,0], [728,90]).
-        addSize([0,0], [300,250]).
-        build();
-
-        googletag.defineSlot('/1038303/STS_1195_300', [1195, 300], 'div-gpt-ad-1556225236001-1').
-        defineSizeMapping(mappingSTSAd2).
-        addService(googletag.pubads());
-
-        // STS Responsive Ad 300x600
-        var mappingSTS300x600 = googletag.sizeMapping().
-        addSize([0,0], [300,600]).
-        build();
-
-        googletag.defineSlot('/1038303/STS_300x600', [300, 600], 'div-gpt-ad-1556225484509-0').
-        defineSizeMapping(mappingSTS300x600).
-        addService(googletag.pubads());
-
-        // STS Responsive Ad 570x365
-        var mappingSTS570x365 = googletag.sizeMapping().
-        addSize([1200,0], [570,365]).
-        addSize([0,0], [300,250]).
-        build();
-
-        googletag.defineSlot('/1038303/STS_570_365', [570, 365], 'div-gpt-ad-1556225518646-0').
-        defineSizeMapping(mappingSTS570x365).
-        addService(googletag.pubads());
-
-        googletag.pubads().collapseEmptyDivs();
-        googletag.enableServices();
-
-      });
-    </script>
 
 </head>
 
 <body <?php body_class(); ?>>
-
+<?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
@@ -111,9 +43,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-lg navbar-dark">
+		<nav class="navbar navbar-expand-md navbar-dark bg-primary">
 
-			<div class="container-fluid">
+		<?php if ( 'container' == $container ) : ?>
+			<div class="container">
+		<?php endif; ?>
 
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) { ?>
@@ -134,13 +68,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 					} ?><!-- end custom logo -->
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-                    <i class="fas fa-bars"></i>
+					<span class="navbar-toggler-icon"></span>
 				</button>
 
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
 					array(
-						'theme_location'  => 'main',
+						'theme_location'  => 'primary',
 						'container_class' => 'collapse navbar-collapse',
 						'container_id'    => 'navbarNavDropdown',
 						'menu_class'      => 'navbar-nav ml-auto',
@@ -150,29 +84,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-
+			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
-
+			<?php endif; ?>
 
 		</nav><!-- .site-navigation -->
 
 	</div><!-- #wrapper-navbar end -->
-
-    <?php if( is_page( array( 36, 38, 40, 43 ) ) ) :
-
-        // Remove Responsive Banner
-
-    else : ?>
-
-    <div class="responsive-banner banner-one">
-
-        <!-- /1038303/STS_1195_300 -->
-        <div id='div-gpt-ad-1556225236001-0'>
-            <script>
-                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1556225236001-0'); });
-            </script>
-        </div>
-
-    </div>
-
-    <?php endif; ?>
